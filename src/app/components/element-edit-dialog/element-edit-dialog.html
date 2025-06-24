@@ -1,0 +1,21 @@
+<h2 mat-dialog-title>Edit Element: {{editedElement.name}}</h2>
+<mat-dialog-content class="full-width">
+  <mat-form-field appearance="outline">
+    <mat-label>Name</mat-label>
+    <input matInput [(ngModel)]="editedElement.name">
+  </mat-form-field>
+
+  <mat-form-field appearance="outline">
+    <mat-label>Weight</mat-label>
+    <input matInput [(ngModel)]="editedElement.weight" type="number" min="0" required>
+  </mat-form-field>
+
+  <mat-form-field appearance="outline">
+    <mat-label>Symbol</mat-label>
+    <input matInput [(ngModel)]="editedElement.symbol">
+  </mat-form-field>
+</mat-dialog-content>
+<mat-dialog-actions align="end">
+  <button matButton (click)="onCancel()">Cancel</button>
+  <button matButton="filled" color="primary" (click)="onSave()">Save</button>
+</mat-dialog-actions>
